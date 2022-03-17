@@ -1,0 +1,221 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peloton</title>
+    <style>
+      * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+        font-size: 100px;
+        border: solid 2px black;
+        border-radius: 10px;
+        padding: 20px 10px;
+        background: radial-gradient(
+          circle at 24.1% 68.8%,
+          rgb(50, 50, 50) 0%,
+          rgb(0, 0, 0) 99.4%
+        );
+        margin: 30px 40px 30px 40px;
+      }
+      h2 {
+        text-align: right;
+        font-size: 20px;
+        margin-right: 50px;
+      }
+      p {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 40px 20px 40px;
+      }
+
+      h3 {
+        font-size: 30px;
+        text-align: center;
+        margin: 0;
+      }
+      ul {
+        list-style-type: none;
+        font-size: 13px;
+        margin: 0;
+        line-height: 20px;
+      }
+      button {
+        padding: 20px;
+        margin: 5px;
+        color: white;
+        background-color: black;
+        border-radius: 4px;
+        border: solid 1px black;
+        font-size: 18px;
+        display: block;
+        margin: 0 auto 50px auto;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      footer {
+        text-align: center;
+        text-transform: lowercase;
+        font-size: 12px;
+      }
+      .peloton-logo {
+        border-radius: 10px;
+        height: 75px;
+      }
+      .instructor {
+        margin: 0 auto 20px auto;
+        width: 500px;
+        border-radius: 5px;
+        display: block;
+        text-align: center;
+      }
+      .word-emphasis {
+        color: #ff3347;
+      }
+      .customer {
+        border-radius: 50%;
+        height: 45px;
+        margin-bottom: 0px;
+      }
+      .review-box {
+        border: solid 1px #ff3340;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+      .reviews {
+        text-decoration: none;
+        color: #ff3347;
+      }
+      .reviews:hover {
+        text-decoration: underline;
+      }
+      .plunge {
+        margin-top: 20px;
+        margin-bottom: 15px;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: #ff3347;
+        color: black;
+        border-color: #ff3347;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      <img
+        src="data:image/png;base64,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"
+        class="peloton-logo"
+      />
+      <div>PELOTON</div>
+    </h1>
+
+    <h2>
+      The Best At-Home Workout. <br />
+      Period.
+    </h2>
+    <p>
+      <strong
+        >Tap into <span class="word-emphasis">motivation</span> whenever you
+        want it.</strong
+      >
+      Find the workout that fits your mood, goals, music taste, experience level
+      and schedule on Peloton Bikes or on the Peloton App.
+    </p>
+    <img
+      src="https://res.cloudinary.com/peloton-cycle/image/fetch/dpr_1.0,f_auto,q_auto:best,w_1000/https://images.ctfassets.net/6jnflt57iyzx/3184yNp1oKBq0PdN0PfjLh/f31d2152ba738baa88d1a36e0deb3309/Peloton_Difference.jpg"
+      class="instructor"
+    />
+    <div class="review-box">
+      <h3>Reviews</h3>
+      <ul>
+        <il>
+          <img
+            src="https://images.unsplash.com/photo-1546456073-92b9f0a8d413?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80"
+            class="customer"
+          />
+          <br />
+          <strong>Biking4Life</strong>
+          <div>⭐⭐⭐⭐⭐</div>
+          <div>
+            "Peloton changed my life. I can bike whenever is convenient for me
+            and the workouts are efficient and motivational."
+          </div>
+        </il>
+        <br />
+        <li>
+          <img
+            src="data:image/jpeg;base64,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"
+            class="customer"
+          />
+          <br />
+          <strong>DoUWntToBldSnwMn</strong>
+          <div>⭐⭐⭐⭐</div>
+          <div>
+            "Being a mom it is hard to find time to workout during the week, but
+            with the Peloton I can get a great workout and not miss a beat with
+            my kids."
+          </div>
+        </li>
+      </ul>
+      <br />
+      <hr />
+      <br />
+      <p class="review-link">
+        <strong
+          >Click for more
+          <a
+            href="https://www.onepeloton.com/bike/reviews"
+            target="_blank"
+            class="reviews"
+          >
+            Peloton Bike Reviews</a
+          >
+        </strong>
+      </p>
+    </div>
+    <p class="plunge">Are you ready to plunge into Peloton?</p>
+    <button>Buy My Peloton Bike</button>
+    <footer>
+      <em>This page was created and designed by Kelly Lozoya</em>
+      <br />
+      <br />
+    </footer>
+  </body>
+  <script>
+    function buyBike() {
+      let name = prompt("What is your name?");
+      let email = prompt("What is your email address?");
+      let country = prompt("What country are you from?");
+      if (country === "Espana" || country === "Mexico") {
+        alert(
+          "Gracias " +
+            name +
+            "!" +
+            " Alguien de " +
+            country +
+            " estara en contacto con usted muy pronto atraves de correo electronico."
+        );
+      } else {
+        alert(
+          "Thank you " +
+            name +
+            "!" +
+            " Someone in " +
+            country +
+            " will reach out to you via email very soon."
+        );
+      }
+    }
+    let purchaseButton = document.querySelector("button");
+
+    purchaseButton.addEventListener("click", buyBike);
+  </script>
+</html>
